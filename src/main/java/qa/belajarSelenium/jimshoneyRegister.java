@@ -1,6 +1,5 @@
 package qa.belajarSelenium;
 
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,16 +16,13 @@ public class jimshoneyRegister {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 
-		WebDriver driver;
-		WebDriverWait wait;
-
 		// set driver
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\CCA\\Downloads\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--start-maximized");
-		driver = new ChromeDriver(options);
+		WebDriver driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		wait = new WebDriverWait(driver, 10);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		driver.get("https://jimshoneyofficial.com/");
 
 		Faker fake = new Faker();
